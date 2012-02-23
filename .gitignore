@@ -1,0 +1,8 @@
+app/logs
+app/cache
+app/cache/*
+app/logs/*
+vendor
+vendor/*
+
+
