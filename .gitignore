@@ -4,5 +4,8 @@ app/cache/*
 app/logs/*
 vendor
 vendor/*
+/web/bundles/
+/app/bootstrap*
+/app/config/parameters.yml
 
 
