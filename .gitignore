@@ -6,6 +6,6 @@ vendor
 vendor/*
 /web/bundles/
 /app/bootstrap*
-/app/config/parameters.yml
+/app/config/parameters.ini
 
 
