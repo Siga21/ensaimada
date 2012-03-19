@@ -1,3 +1,16 @@
-BackendBundle_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: BackendBundle:Default:index }
+backend_portada:
+    pattern:  /backend
+    defaults: { _controller: BackendBundle:Sitio:index}
+    
+_familia:
+    resource: ./routing/familia.yml
+_articulo:
+    resource: ./routing/articulo.yml
+_tienda:
+    resource: ./routing/tienda.yml
+_cliente:
+    resource: ./routing/cliente.yml
+_pedidoc:
+    resource: ./routing/pedidoc.yml
+_pedidod:
+    resource: ./routing/pedidod.yml                

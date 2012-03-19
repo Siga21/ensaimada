@@ -1,0 +1,29 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+{% stylesheets '@BackendBundle/Resources/public/css/normalizar.css'
+               '@BackendBundle/Resources/public/css/comun.css'
+               '@BackendBundle/Resources/public/css/backend.css'
+               output='css/backend.css' %}
+<link href="{{ asset_url }}" rel="stylesheet" type="text/css" />
+{% endstylesheets %}
+{% endblock %}
+
+{% block body %}
+<header>
+    <h1><a href="{{ path('backend_portada') }}">Ensaimada ADMIN</a></h1>
+    <nav>
+        <ul>
+            <li><a href="{{ path('articulo') }}">Articulo</a></li>
+            <li><a href="{{ path('tienda') }}">Tienda</a></li>
+            <li><a href="{{ path('familia') }}">Familia</a></li>
+            <li><a href="{{ path('pedidoc') }}">Pedido C</a></li>
+            <li><a href="{{ path('pedidod') }}">Pedido D</a></li>
+        </ul>
+    </nav>
+</header>
+
+<article>
+    {% block article %}{% endblock %}
+</article>
+{% endblock %}

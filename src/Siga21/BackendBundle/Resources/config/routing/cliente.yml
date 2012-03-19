@@ -1,30 +1,30 @@
 cliente:
-    pattern:  /
+    pattern:  /backend/cliente
     defaults: { _controller: "BackendBundle:cliente:index" }
 
 cliente_show:
-    pattern:  /{id}/show
+    pattern:  /backend/cliente/{id}/show
     defaults: { _controller: "BackendBundle:cliente:show" }
 
 cliente_new:
-    pattern:  /new
+    pattern:  /backend/cliente/new
     defaults: { _controller: "BackendBundle:cliente:new" }
 
 cliente_create:
-    pattern:  /create
+    pattern:  /backend/cliente/create
     defaults: { _controller: "BackendBundle:cliente:create" }
     requirements: { _method: post }
 
 cliente_edit:
-    pattern:  /{id}/edit
+    pattern:  /backend/cliente/{id}/edit
     defaults: { _controller: "BackendBundle:cliente:edit" }
 
 cliente_update:
-    pattern:  /{id}/update
+    pattern:  /backend/cliente/{id}/update
     defaults: { _controller: "BackendBundle:cliente:update" }
     requirements: { _method: post }
 
 cliente_delete:
-    pattern:  /{id}/delete
+    pattern:  /backend/cliente/{id}/delete
     defaults: { _controller: "BackendBundle:cliente:delete" }
     requirements: { _method: post }
