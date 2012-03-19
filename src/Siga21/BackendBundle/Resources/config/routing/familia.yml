@@ -1,0 +1,30 @@
+familia:
+    pattern:  /
+    defaults: { _controller: "BackendBundle:familia:index" }
+
+familia_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "BackendBundle:familia:show" }
+
+familia_new:
+    pattern:  /new
+    defaults: { _controller: "BackendBundle:familia:new" }
+
+familia_create:
+    pattern:  /create
+    defaults: { _controller: "BackendBundle:familia:create" }
+    requirements: { _method: post }
+
+familia_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "BackendBundle:familia:edit" }
+
+familia_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "BackendBundle:familia:update" }
+    requirements: { _method: post }
+
+familia_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "BackendBundle:familia:delete" }
+    requirements: { _method: post }

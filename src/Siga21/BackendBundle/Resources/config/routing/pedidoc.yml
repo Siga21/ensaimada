@@ -1,0 +1,30 @@
+pedidoc:
+    pattern:  /
+    defaults: { _controller: "BackendBundle:pedidoc:index" }
+
+pedidoc_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "BackendBundle:pedidoc:show" }
+
+pedidoc_new:
+    pattern:  /new
+    defaults: { _controller: "BackendBundle:pedidoc:new" }
+
+pedidoc_create:
+    pattern:  /create
+    defaults: { _controller: "BackendBundle:pedidoc:create" }
+    requirements: { _method: post }
+
+pedidoc_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "BackendBundle:pedidoc:edit" }
+
+pedidoc_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "BackendBundle:pedidoc:update" }
+    requirements: { _method: post }
+
+pedidoc_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "BackendBundle:pedidoc:delete" }
+    requirements: { _method: post }

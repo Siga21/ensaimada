@@ -1,0 +1,55 @@
+<h1>tienda list</h1>
+
+<table class="records_list">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Password</th>
+            <th>Salt</th>
+            <th>Nombre</th>
+            <th>Direccion</th>
+            <th>Poblacion</th>
+            <th>Provincia</th>
+            <th>Pais</th>
+            <th>Telefono</th>
+            <th>Fax</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for entity in entities %}
+        <tr>
+            <td><a href="{{ path('tienda_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+            <td>{{ entity.password }}</td>
+            <td>{{ entity.salt }}</td>
+            <td>{{ entity.nombre }}</td>
+            <td>{{ entity.direccion }}</td>
+            <td>{{ entity.poblacion }}</td>
+            <td>{{ entity.provincia }}</td>
+            <td>{{ entity.pais }}</td>
+            <td>{{ entity.telefono }}</td>
+            <td>{{ entity.fax }}</td>
+            <td>{{ entity.email }}</td>
+            <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('tienda_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('tienda_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<ul>
+    <li>
+        <a href="{{ path('tienda_new') }}">
+            Create a new entry
+        </a>
+    </li>
+</ul>

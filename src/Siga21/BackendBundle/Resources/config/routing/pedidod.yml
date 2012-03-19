@@ -1,0 +1,30 @@
+pedidod:
+    pattern:  /
+    defaults: { _controller: "BackendBundle:pedidod:index" }
+
+pedidod_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "BackendBundle:pedidod:show" }
+
+pedidod_new:
+    pattern:  /new
+    defaults: { _controller: "BackendBundle:pedidod:new" }
+
+pedidod_create:
+    pattern:  /create
+    defaults: { _controller: "BackendBundle:pedidod:create" }
+    requirements: { _method: post }
+
+pedidod_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "BackendBundle:pedidod:edit" }
+
+pedidod_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "BackendBundle:pedidod:update" }
+    requirements: { _method: post }
+
+pedidod_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "BackendBundle:pedidod:delete" }
+    requirements: { _method: post }

@@ -20,12 +20,9 @@ class articulo
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
-
-    /**
-     * @var integer $familia_id
-     *
-     * @ORM\Column(name="familia_id", type="integer")
-     */
+    /** 
+      * @ORM\ManyToOne(targetEntity="Siga21\BackendBundle\Entity\familia")
+      */
     private $familia_id;
 
     /**
@@ -84,9 +81,9 @@ class articulo
     /**
      * Set familia_id
      *
-     * @param integer $familiaId
+     * @param Siga21\BackendBundle\Entity\familia $familiaId
      */
-    public function setFamiliaId($familiaId)
+    public function setFamiliaId(\Siga21\BackendBundle\Entity\familia $familiaId)
     {
         $this->familia_id = $familiaId;
     }
@@ -94,7 +91,7 @@ class articulo
     /**
      * Get familia_id
      *
-     * @return integer 
+     * @return Siga21\BackendBundle\Entity\familia 
      */
     public function getFamiliaId()
     {
@@ -219,5 +216,10 @@ class articulo
     public function getImagen()
     {
         return $this->imagen;
+    }
+    
+    public function __toString()
+    {
+        return $this->getDescripcion();
     }
 }
