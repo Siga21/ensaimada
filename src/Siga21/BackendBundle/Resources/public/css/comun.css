@@ -278,7 +278,7 @@ footer {
    Cabecera y menú de navegación
    ========================================================================== */
 header {
-    background: #00154E;
+    background: #0f0f0f; /*#00154E;*/
     color: #FFF;
     border-bottom: 1px solid #CCC;
     height: 60px;
