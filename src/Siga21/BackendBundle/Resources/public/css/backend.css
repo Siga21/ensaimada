@@ -48,7 +48,7 @@ body article {
    Cabecera y menú de navegación
    ========================================================================== */
 nav ul {
-    left: 230px;
+    left: 300px;
 }
 nav ul li {
     padding-left: 2.5em;
@@ -59,7 +59,7 @@ nav ul li {
 #usuario nav li:nth-child(3) a,
 #ciudad  nav li:nth-child(4) a {
     border: none !important;
-    color: #FF3385 !important;
+    /*color: #FF3385 !important;*/
     font-size: 21px !important;
     font-weight: normal;
     text-decoration: none;
@@ -73,7 +73,8 @@ table.estrecha {
     width: auto;
 }
 table thead th {
-    color: #C06;
+/*    color: #C06;*/
+    color: #a9a9a9;
     font-weight: bold;
 }
 table th, table td {

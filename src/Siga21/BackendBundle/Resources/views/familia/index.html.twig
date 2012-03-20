@@ -1,4 +1,11 @@
-<h1>familia list</h1>
+{% extends "BackendBundle::backend.html.twig" %}
+
+{% block id 'Familia' %}
+{% block title %}Listado de Familias{% endblock %}
+
+{% block article %}
+<h1>{{ block('title') }}</h1>
+
 
 <table class="records_list">
     <thead>
@@ -35,3 +42,4 @@
         </a>
     </li>
 </ul>
+{% endblock %}

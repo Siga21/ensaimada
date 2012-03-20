@@ -1,4 +1,10 @@
-<h1>pedidod list</h1>
+{% extends "BackendBundle::backend.html.twig" %}
+
+{% block id 'Pedidod' %}
+{% block title %}Listado de Pedidod{% endblock %}
+
+{% block article %}
+<h1>{{ block('title') }}</h1>
 
 <table class="records_list">
     <thead>
@@ -37,3 +43,4 @@
         </a>
     </li>
 </ul>
+{% endblock %}

@@ -257,7 +257,7 @@ a:active  { position: relative; top: 1px; }
    Estructura
    ========================================================================== */
 #contenedor {
-    background: #FFF;
+    background: #e0e0e0;
     margin: 0 auto 1em;
     width: 960px;
 
@@ -278,7 +278,7 @@ footer {
    Cabecera y menú de navegación
    ========================================================================== */
 header {
-    background: #0f0f0f; /*#00154E;*/
+    background: #a9a9a9; /*#00154E;*/
     color: #FFF;
     border-bottom: 1px solid #CCC;
     height: 60px;
@@ -287,11 +287,12 @@ header {
     position: relative;
 }
 header a, header a:visited {
-    border-bottom: 1px solid;
+   /* border-bottom: 1px solid;*/
     text-decoration: none;
 }
 header a:hover {
-    color: #FF0A85 !important;
+   color: #e0e0e0 !important;
+
 }
 
 header h1 {
@@ -306,7 +307,6 @@ header h1 a {
     font-size: 28px;
     text-decoration: none;
 }
-
 nav ul {
     list-style: none;
     position: absolute;
@@ -320,7 +320,7 @@ nav ul li {
     padding-left: 2.5em;
 }
 nav ul li a {
-    color: #FFF !important;
+    color: #000; /*#FFF !important;*/
     font-size: 18px;
 }
 
