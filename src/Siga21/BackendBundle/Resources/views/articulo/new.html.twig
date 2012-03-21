@@ -1,16 +1,23 @@
-<h1>articulo creation</h1>
+{% extends "BackendBundle::backend.html.twig" %}
+{% block id 'Articulo' %}
+{% block title %}Añadir un nuevo articulo{% endblock %}
+
+{% block article %}
+<h1>{{ block('title') }}</h1>
+
 
 <form action="{{ path('articulo_create') }}" method="post" {{ form_enctype(form) }}>
     {{ form_widget(form) }}
     <p>
-        <button type="submit">Create</button>
+        <button type="submit" class="boton">Guardar</button>
     </p>
 </form>
 
 <ul class="record_actions">
     <li>
-        <a href="{{ path('articulo') }}">
+        <a href="{{ path('articulo') }}" class="boton">
             Back to the list
         </a>
     </li>
 </ul>
+{% endblock %}

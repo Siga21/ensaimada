@@ -1,4 +1,10 @@
-<h1>articulo</h1>
+{% extends "BackendBundle::backend.html.twig" %}
+
+{% block id 'Articulo' %}
+{% block title %}Descripcion: {{ entity }}{% endblock %}
+
+{% block article %}
+<h1>{{ block('title') }}</h1>
 
 <table class="record_properties">
     <tbody>
@@ -35,19 +41,20 @@
 
 <ul class="record_actions">
     <li>
-        <a href="{{ path('articulo') }}">
-            Back to the list
+        <a href="{{ path('articulo') }}" class="boton">
+            Volver a la lista
         </a>
     </li>
     <li>
-        <a href="{{ path('articulo_edit', { 'id': entity.id }) }}">
-            Edit
+        <a href="{{ path('articulo_edit', { 'id': entity.id }) }}" class="boton">
+            Editar
         </a>
     </li>
     <li>
         <form action="{{ path('articulo_delete', { 'id': entity.id }) }}" method="post">
             {{ form_widget(delete_form) }}
-            <button type="submit">Delete</button>
+            <button type="submit" class="boton">Borrar</button>
         </form>
     </li>
 </ul>
+{% endblock %}

@@ -82,6 +82,7 @@ table th, table td {
 }
 table tr, table td, table th {
     border-width: 1px 0;
+    text-align: center;
 }
 
 table td ul {

@@ -11,9 +11,9 @@ class articuloType extends AbstractType
     {
         $builder
             ->add('nombre')
-            ->add('precio')
+            ->add('precio', 'money')
             ->add('descripcion')
-            ->add('vigente')
+            ->add('vigente', null, array('required' => false))
             ->add('ean13')
             ->add('imagen')
             ->add('familia_id')
