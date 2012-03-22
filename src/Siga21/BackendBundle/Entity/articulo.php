@@ -220,6 +220,6 @@ class articulo
     
     public function __toString()
     {
-        return $this->getDescripcion();
+        return $this->getNombre();
     }
 }
