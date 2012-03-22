@@ -1,16 +1,22 @@
-<h1>familia creation</h1>
+{% extends "BackendBundle::backend.html.twig" %}
+{% block id 'Cliente' %}
+{% block title %}Añadir un nuevo cliente{% endblock %}
+
+{% block article %}
+<h1>{{ block('title') }}</h1>
 
 <form action="{{ path('familia_create') }}" method="post" {{ form_enctype(form) }}>
     {{ form_widget(form) }}
     <p>
-        <button type="submit">Create</button>
+        <button type="submit" class="boton">Guardar</button>
     </p>
 </form>
 
 <ul class="record_actions">
     <li>
-        <a href="{{ path('familia') }}">
-            Back to the list
+        <a href="{{ path('familia') }}" class="boton">
+            Volver a la lista
         </a>
     </li>
 </ul>
+{% endblock %}

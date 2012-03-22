@@ -131,6 +131,7 @@ form p.ayuda {
 form input[type="submit"] {
     margin: 1em 0;
 }
+
 form input.largo {
     width: 500px;
 }

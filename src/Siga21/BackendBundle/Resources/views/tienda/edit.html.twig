@@ -1,22 +1,29 @@
-<h1>tienda edit</h1>
+{% extends "BackendBundle::backend.html.twig" %}
+
+{% block id 'Tienda' %}
+{% block title %}Modificar: {{ entity }}{% endblock %}
+
+{% block article %}
+<h1>{{ block('title') }}</h1>
 
 <form action="{{ path('tienda_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
     {{ form_widget(edit_form) }}
     <p>
-        <button type="submit">Edit</button>
+        <button type="submit" class="boton">Guardar</button>
     </p>
 </form>
 
 <ul class="record_actions">
     <li>
-        <a href="{{ path('tienda') }}">
-            Back to the list
+        <a href="{{ path('tienda') }}" class="boton">
+            Volver a la lista
         </a>
     </li>
     <li>
         <form action="{{ path('tienda_delete', { 'id': entity.id }) }}" method="post">
             {{ form_widget(delete_form) }}
-            <button type="submit">Delete</button>
+            <button type="submit" class="boton">Borrar</button>
         </form>
     </li>
 </ul>
+{% endblock %}
