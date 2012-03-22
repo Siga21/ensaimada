@@ -22,7 +22,7 @@
     <tbody>
     {% for entity in entities %}
         <tr>
-            <td><a href="{{ path('articulo_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+            <td><a title ="Pulsar para visualizar el registro" href="{{ path('articulo_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
             <td>{{ entity.nombre }}</td>
             <td>{{ entity.precio }}</td>
             <td>{{ entity.descripcion }}</td>
@@ -32,11 +32,11 @@
             <td>
                 <ul>
                     <li>
-                    <a href="{{ path('articulo_show', { 'id': entity.id }) }}"><img src="{{ asset('bundles/backend/images/visualizar.png') }}"></a>
+                    <a title="Pulsar para borrar el registro" href="{{ path('articulo_show', { 'id': entity.id }) }}"><img src="{{ asset('bundles/backend/images/borrar.gif') }}"></a>
                 
                     </li>
                     <li>
-                        <a href="{{ path('articulo_edit', { 'id': entity.id }) }}"><img src="{{ asset('bundles/backend/images/borrar.gif') }}"></a>
+                        <a title="Pulsar para editar el registro" href="{{ path('articulo_edit', { 'id': entity.id }) }}"><img src="{{ asset('bundles/backend/images/editar.gif') }}"></a>
                     </li>
                 </ul>
             </td>
@@ -47,7 +47,7 @@
 
 <ul>
     <li>
-        <a class="boton" href="{{ path('articulo_new') }}">
+        <a title="Pulsar para crear un nuevo registro"class="boton" href="{{ path('articulo_new') }}">
             Crear nuevo
         </a>
     </li>

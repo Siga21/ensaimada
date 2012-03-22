@@ -10,7 +10,7 @@
 <form action="{{ path('articulo_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
     {{ form_widget(edit_form) }}
     <p>
-        <button type="submit" class="boton">Guardar</button>
+        <button type="submit" title="Pulsar para guardar el nuevo registro" class="boton"  >Guardar</button>
     </p>
 </form>
 
