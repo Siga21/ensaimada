@@ -14,8 +14,22 @@
 <header>
 
     <h1><a href="{{ path('portada') }}"><img src="{{ asset('bundles/frontend/images/latorta.png') }}"></a></h1>
-  
+<center>
+ {% for entity in entities %}
+        <p class="cabecera">{{ entity.nombre }}</p>
+        <p class="cabecera">{{ entity.direccion }}</p>
+        <p class="cabecera">{{ entity.telefono }}</p>
+        <p class="cabecera">{{ entity.email }}</p>
+    {% endfor %}
+</center>
 </header>
+<center>
+{% for entity2 in entities2 %}
+        <p class="cabecera">{{ entity2.nombre }}</p>
+        <p class="cabecera">{{ entity2.precio }}</p>
+        <p class="cabecera">{{ entity2.descripcion }}</p>
+{% endfor %}
+</center>   
 <article>
     {% block article %}{% endblock %}
 </article>

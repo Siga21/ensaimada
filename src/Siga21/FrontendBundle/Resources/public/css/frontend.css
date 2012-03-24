@@ -1,44 +1,11 @@
-/*
-
- ,adPPYba,  88       88  8b,dPPYba,    ,adPPYba,   8b,dPPYba, 
-a8"     ""  88       88  88P'    "8a  a8"     "8a  88P'   `"8a
-8b          88       88  88       d8  8b       d8  88       88
-"8a,   ,aa  "8a,   ,a88  88b,   ,a8"  "8a,   ,a8"  88       88
- `"Ybbd8"'   `"YbbdP'Y8  88`YbbdP"'    `"YbbdP"'   88       88
-                         88                                   
-                         88                                   
-
--o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-
-
-88                                   88                                          88  
-88                                   88                                          88  
-88                                   88                                          88  
-88,dPPYba,   ,adPPYYba,   ,adPPYba,  88   ,d8   ,adPPYba,  8b,dPPYba,    ,adPPYb,88  
-88P'    "8a  ""     `Y8  a8"     ""  88 ,a8"   a8P_____88  88P'   `"8a  a8"    `Y88  
-88       d8  ,adPPPPP88  8b          8888[     8PP"""""""  88       88  8b       88  
-88b,   ,a8"  88,    ,88  "8a,   ,aa  88`"Yba,  "8b,   ,aa  88       88  "8a,   ,d88  
-8Y"Ybbd8"'   `"8bbdP"Y8   `"Ybbd8"'  88   `Y8a  `"Ybbd8"'  88       88   `"8bbdP"Y8
-
--o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-o-
-
-
-  Objetivo de esta hoja de estilos
-  --------------------------------------------------------------
-   Incluye solamente los estilos particulares del backend o zona
-   de administración del sitio web, lo que permite aplicarle
-   estilos específicos diferentes a la parte pública y también a
-   la zona de administración usada por las tiendas.
-
-  Se aplica a
-  --------------------------------------------------------------
-   backend
-
-*/
-
-
 /* =============================================================================
    Estructura
    ========================================================================== */
+header {
+    background: #B40404;
+    height: 175px; 
+}
+
 body article {
     padding: 0 20px;
     width: 1010px; /*920px;*/
@@ -169,6 +136,19 @@ ul.record_actions li a[href*="/edit"] {
    ========================================================================== */
 form > div + p {
     margin-top: 1em;
+}
+
+/* =============================================================================
+   Mios class
+   ========================================================================== */
+#contenedor {
+    background: #fff;
+}
+.cabecera
+{
+   margin-top:0px;
+   margin-bottom: 0px; 
+   font-size:25px;
 }
 
 
