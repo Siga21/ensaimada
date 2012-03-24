@@ -2,6 +2,9 @@
 #_internal:
 #   resource: "@FrameworkBundle/Resources/config/routing/internal.xml"
 #   prefix:   /_internal
+FrontendBundle:
+    resource: "@FrontendBundle/Resources/config/routing.yml"
+    prefix:   /
 BackendBundle:
     resource: "@BackendBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /backend

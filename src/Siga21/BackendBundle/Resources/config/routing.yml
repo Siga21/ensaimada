@@ -1,5 +1,5 @@
 backend_portada:
-    pattern:  /backend
+    pattern:  /
     defaults: { _controller: BackendBundle:Sitio:index}
     
 _familia:

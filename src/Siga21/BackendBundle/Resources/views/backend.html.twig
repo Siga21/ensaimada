@@ -4,6 +4,7 @@
 {% stylesheets '@BackendBundle/Resources/public/css/normalizar.css'
                '@BackendBundle/Resources/public/css/comun.css'
                '@BackendBundle/Resources/public/css/backend.css'
+               filter='yui_css'
                output='css/backend.css' %}
 <link href="{{ asset_url }}" rel="stylesheet" type="text/css" />
 {% endstylesheets %}
@@ -11,7 +12,8 @@
 
 {% block body %}
 <header>
-    <h1><a href="{{ path('backend_portada') }}">E N S A I M A D A</a></h1>
+
+    <h1><a href="{{ path('backend_portada') }}"><img src="{{ asset('bundles/backend/images/latorta.png') }}"></a></h1>
     <nav>
         <ul>
             <li><a href="{{ path('articulo') }}">Articulo</a></li>
@@ -23,7 +25,6 @@
         </ul>
     </nav>
 </header>
-
 <article>
     {% block article %}{% endblock %}
 </article>

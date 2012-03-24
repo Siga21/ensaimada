@@ -1,30 +1,30 @@
 pedidoc:
-    pattern:  /backend/pedidoc
+    pattern:  /pedidoc
     defaults: { _controller: "BackendBundle:pedidoc:index" }
 
 pedidoc_show:
-    pattern:  /backend/pedidoc/{id}/show
+    pattern:  /pedidoc/{id}/show
     defaults: { _controller: "BackendBundle:pedidoc:show" }
 
 pedidoc_new:
-    pattern:  /backend/pedidoc/new
+    pattern:  /pedidoc/new
     defaults: { _controller: "BackendBundle:pedidoc:new" }
 
 pedidoc_create:
-    pattern:  /backend/pedidoc/create
+    pattern:  /pedidoc/create
     defaults: { _controller: "BackendBundle:pedidoc:create" }
     requirements: { _method: post }
 
 pedidoc_edit:
-    pattern:  /backend/pedidoc/{id}/edit
+    pattern:  /pedidoc/{id}/edit
     defaults: { _controller: "BackendBundle:pedidoc:edit" }
 
 pedidoc_update:
-    pattern:  /backend/pedidoc/{id}/update
+    pattern:  /pedidoc/{id}/update
     defaults: { _controller: "BackendBundle:pedidoc:update" }
     requirements: { _method: post }
 
 pedidoc_delete:
-    pattern:  /backend/pedidoc/{id}/delete
+    pattern:  /pedidoc/{id}/delete
     defaults: { _controller: "BackendBundle:pedidoc:delete" }
     requirements: { _method: post }

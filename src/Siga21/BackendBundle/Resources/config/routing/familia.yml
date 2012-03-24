@@ -1,30 +1,30 @@
 familia:
-    pattern:  /backend/familia
+    pattern:  /familia
     defaults: { _controller: "BackendBundle:familia:index" }
 
 familia_show:
-    pattern:  /backend/familia/{id}/show
+    pattern:  /familia/{id}/show
     defaults: { _controller: "BackendBundle:familia:show" }
 
 familia_new:
-    pattern:  /backend/familia/new
+    pattern:  /familia/new
     defaults: { _controller: "BackendBundle:familia:new" }
 
 familia_create:
-    pattern:  /backend/familia/create
+    pattern:  /familia/create
     defaults: { _controller: "BackendBundle:familia:create" }
     requirements: { _method: post }
 
 familia_edit:
-    pattern:  /backend/familia/{id}/edit
+    pattern:  /familia/{id}/edit
     defaults: { _controller: "BackendBundle:familia:edit" }
 
 familia_update:
-    pattern:  /backend/familia/{id}/update
+    pattern:  /familia/{id}/update
     defaults: { _controller: "BackendBundle:familia:update" }
     requirements: { _method: post }
 
 familia_delete:
-    pattern:  /backend/familia/{id}/delete
+    pattern:  /familia/{id}/delete
     defaults: { _controller: "BackendBundle:familia:delete" }
     requirements: { _method: post }
