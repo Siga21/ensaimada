@@ -5,7 +5,7 @@ namespace Siga21\FrontendBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 
-class DefaultController extends Controller
+class PedidoController extends Controller
 {
     
     public function portadaAction($name)
