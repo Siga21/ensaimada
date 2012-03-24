@@ -1,0 +1,22 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+{% stylesheets '@FrontendBundle/Resources/public/css/normalizar.css'
+               '@FrontendBundle/Resources/public/css/comun.css'
+               '@FrontendBundle/Resources/public/css/frontend.css'
+               filter='yui_css'
+               output='css/frontend.css' %}
+<link href="{{ asset_url }}" rel="stylesheet" type="text/css" />
+{% endstylesheets %}
+{% endblock %}
+
+{% block body %}
+<header>
+
+    <h1><a href="{{ path('frontend_portada') }}"><img src="{{ asset('bundles/frontend/images/latorta.png') }}"></a></h1>
+  
+</header>
+<article>
+    {% block article %}{% endblock %}
+</article>
+{% endblock %}
