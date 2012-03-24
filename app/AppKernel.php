@@ -20,6 +20,8 @@ class AppKernel extends Kernel
             new Siga21\BackendBundle\BackendBundle(),
             new Siga21\ExtranetBundle\ExtranetBundle(),
             new Siga21\FrontendBundle\FrontendBundle(),
+            new Ideup\SimplePaginatorBundle\IdeupSimplePaginatorBundle(),
+
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

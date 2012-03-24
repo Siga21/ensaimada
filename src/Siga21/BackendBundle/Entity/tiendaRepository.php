@@ -12,4 +12,18 @@ use Doctrine\ORM\EntityRepository;
  */
 class tiendaRepository extends EntityRepository
 {
+
+public function queryTodasLasTiendas()
+{
+$em = $this->getEntityManager();
+$consulta = $em->createQuery('SELECT o FROM BackendBundle:tienda o');
+return $consulta;
+}
+public function findTodasLasTiendas()
+{
+return $this->queryTodasLasTiendas()->getResult();
+}
+
+
+
 }

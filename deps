@@ -1,7 +1,12 @@
 [symfony]
     git=http://github.com/symfony/symfony.git
     version=v2.0.10
+[doctrine-extensions]
+    git=https://github.com/beberlei/DoctrineExtensions.git
 
+[IdeupSimplePaginatorBundle]
+    git=https://github.com/javiacei/IdeupSimplePaginatorBundle
+    target=/bundles/Ideup/SimplePaginatorBundle
 [twig]
     git=http://github.com/fabpot/Twig.git
     version=v1.6.0
@@ -61,3 +66,11 @@
     git=http://github.com/symfony/AsseticBundle.git
     target=/bundles/Symfony/Bundle/AsseticBundle
     version=v1.0.1
+
+[doctrine-extensions]
+    git=https://github.com/beberlei/DoctrineExtensions.git
+
+[IdeupSimplePaginatorBundle]
+    git=https://github.com/javiacei/IdeupSimplePaginatorBundle
+    target=/bundles/Ideup/SimplePaginatorBundle
+

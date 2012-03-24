@@ -6,12 +6,19 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Siga21\BackendBundle\Entity\tienda;
 use Siga21\BackendBundle\Entity\articulo;
 
+
 class PedidoController extends Controller
 {
     
     public function portadaAction()
     {
 
+        $paginador = $this->get('ideup.simple_paginator');
+        $entities = $paginador->paginate($em->getRepository('BackendBundle:tienda')->queryTodasLasTiendas())->getResult();
+        return $this->render('FrontendBundle::frontend.html.twig', array(
+        'entities' => $entities
+        ));
+/*
         $em = $this->getDoctrine()->getEntityManager();
         $entities = $em->getRepository('BackendBundle:tienda')->findById('4');
 
@@ -21,7 +28,7 @@ class PedidoController extends Controller
         return $this->render('FrontendBundle::frontend.html.twig', array(
             'entities' => $entities, 'entities2' => $entities2
         ));
-
+*/
 
     }
 }
