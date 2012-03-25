@@ -22,14 +22,15 @@
         <p class="cabecera">{{ entity.email }}</p>
     {% endfor %}
 </center>
+{% include 'FrontendBundle::paginador.html.twig' with { 'ruta': 'portada' } %}
 </header>
-<center>
+{#<center>
 {% for entity2 in entities2 %}
         <p class="cabecera">{{ entity2.nombre }}</p>
         <p class="cabecera">{{ entity2.precio }}</p>
         <p class="cabecera">{{ entity2.descripcion }}</p>
 {% endfor %}
-</center>   
+</center>#}
 <article>
     {% block article %}{% endblock %}
 </article>

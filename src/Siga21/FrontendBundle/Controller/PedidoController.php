@@ -12,11 +12,14 @@ class PedidoController extends Controller
     
     public function portadaAction()
     {
-
+        $em = $this->getDoctrine()->getEntityManager();
         $paginador = $this->get('ideup.simple_paginator');
+        $paginador->setItemsPerPage(1);
         $entities = $paginador->paginate($em->getRepository('BackendBundle:tienda')->queryTodasLasTiendas())->getResult();
+                  
         return $this->render('FrontendBundle::frontend.html.twig', array(
-        'entities' => $entities
+        'entities' => $entities,
+        'paginador' => $paginador
         ));
 /*
         $em = $this->getDoctrine()->getEntityManager();
