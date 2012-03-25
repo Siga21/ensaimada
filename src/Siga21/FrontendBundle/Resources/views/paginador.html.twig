@@ -1,12 +1,11 @@
-abcdefghijklmnopqrstuvwxyz1111111111111111111111
 {% if paginador.currentPage > 1 %}
-   <a href="{{ path(ruta, {'page': paginador.previousPage}) }}">Anterior</a>
+   <a href="{{ path(ruta, {'page': paginador.previousPage}) }}"><img src="{{ asset('bundles/frontend/images/anterior.gif') }}" class="flechas"></a>
 {% else %}
-   Anterior
+   <img src="{{ asset('bundles/frontend/images/anterior.gif') }}" class="flechas">
 {% endif %}
 {% if paginador.currentPage < paginador.lastPage %}
-   <a href="{{ path(ruta, {'page': paginador.nextPage}) }}">Siguiente</a>
+   <a href="{{ path(ruta, {'page': paginador.nextPage}) }}"><img src="{{ asset('bundles/frontend/images/siguiente.gif') }}" class="flechas"></a>
 {% else %}
-   Siguiente
+    <img src="{{ asset('bundles/frontend/images/siguiente.gif') }}" class="flechas">
 {% endif %}
 
