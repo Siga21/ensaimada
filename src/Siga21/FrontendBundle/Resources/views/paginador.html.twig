@@ -1,11 +1,11 @@
-{% if paginador.currentPage > 1 %}
-   <a href="{{ path(ruta, {'page': paginador.previousPage}) }}"><img src="{{ asset('bundles/frontend/images/prev.png') }}" class="flechas"></a>
+{% if paginador.currentPage('tienda') > 1 %}
+   <a href="{{ path(ruta, {'page': paginador.previousPage('tienda'), 'paginatorId': 'tienda'}) }}"><img src="{{ asset('bundles/frontend/images/prev.png') }}" class="flechas"></a>
 {% else %}
-   <img src="{{ asset('bundles/frontend/images/prev.png') }}" class="flechas">
+   {#<img src="{{ asset('bundles/frontend/images/prev.png') }}" class="flechas">#}
 {% endif %}
-{% if paginador.currentPage < paginador.lastPage %}
-   <a href="{{ path(ruta, {'page': paginador.nextPage}) }}"><img src="{{ asset('bundles/frontend/images/next.png') }}" class="flechas"></a>
+{% if paginador.currentPage('tienda') < paginador.lastPage('tienda') %}
+   <a href="{{ path(ruta, {'page': paginador.nextPage('tienda'), 'paginatorId': 'tienda'}) }}"><img src="{{ asset('bundles/frontend/images/next.png') }}" class="flechas"></a>
 {% else %}
-    <img src="{{ asset('bundles/frontend/images/next.png') }}" class="flechas">
+    {#<img src="{{ asset('bundles/frontend/images/next.png') }}" class="flechas">#}
 {% endif %}
 

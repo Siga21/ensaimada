@@ -6,10 +6,47 @@ header {
     height: 175px; 
 }
 
-body article {
-    padding: 0 20px;
-    width: 1010px; /*920px;*/
+body aside
+{
+    float: left;
+    margin-left: 10px;
+    width: 200px;
+    height:650px;
+
 }
+body article {
+    float: left;
+    padding: 0 20px;
+    width: 780px; /*920px;*/
+    margin-left: 10px;
+}
+
+#titulo_articulos
+{
+   widht:100%;
+   height: 30px;
+   color: #000;
+   background-color: #a9a9a9;
+}
+#detalle_articulo
+{
+   widht:100%;
+   border:1px solid black;
+}
+#imagen_articulo
+{
+   float: left;
+   width:33%;
+   border:1px solid black;
+}
+#datos_articulo
+{
+   float:left;
+   width:66%;
+   border:1px solid black;
+}
+
+
 
 /* =============================================================================
    Cabecera y menú de navegación
@@ -159,5 +196,65 @@ form > div + p {
    border-left: 0px;
    border-right: 0px;
    border-bottom: 0px;
+}
+
+/* boton */
+a.btn, input[type="submit"] {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0.05, rgb(255,255,255)),
+    color-stop(0.50, rgb(236,236,236)),
+    color-stop(0.75, rgb(216,216,216))
+  );
+  background-image: -moz-linear-gradient(
+    center top,
+    rgb(255,255,255) 5%,
+    rgb(236,236,236) 50%,
+    rgb(216,216,216) 75%
+  );
+
+  border: 1px solid #AAA;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+
+  color: #333;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+
+  margin: 1em 0;
+  padding: .5em;
+
+  text-align: center;
+  text-decoration: none;
+
+  text-shadow: 0 1px 0 #FFF;
+  -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+a.btn:hover, input[type="submit"]:hover {
+  border-color: #777;
+
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0.05, rgb(255,255,255)),
+    color-stop(0.50, rgb(240,244,249)),
+    color-stop(0.75, rgb(203,218,235))
+  );
+  background-image: -moz-linear-gradient(
+    center top,
+    rgb(255,255,255) 5%,
+    rgb(240,244,249) 50%,
+    rgb(203,218,235) 75%
+  );
+}
+a.btn:active, input[type="submit"]:active {
+  border-color: #000;
+  position: relative;
+  top: 1px;
 }
 

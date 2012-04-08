@@ -1,0 +1,11 @@
+{% if paginador.currentPage('articulo') > 1 %}
+   <a href="{{ path(ruta, {'page': paginador.previousPage('articulo'), 'paginatorId': 'articulo'}) }}"><img src="{{ asset('bundles/frontend/images/anterior.gif') }}"></a>
+{% else %}
+   {#<img src="{{ asset('bundles/frontend/images/anterior.gif') }}">#}
+{% endif %}
+{% if paginador.currentPage('articulo') < paginador.lastPage('articulo') %}
+   <a href="{{ path(ruta, {'page': paginador.nextPage('articulo'), 'paginatorId': 'articulo'}) }}"><img src="{{ asset('bundles/frontend/images/siguiente.gif') }}"></a>
+{% else %}
+    {#<img src="{{ asset('bundles/frontend/images/siguiente.gif') }}">#}
+{% endif %}
+

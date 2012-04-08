@@ -12,4 +12,15 @@ use Doctrine\ORM\EntityRepository;
  */
 class articuloRepository extends EntityRepository
 {
+public function queryTodosLosArticulos()
+{
+$em = $this->getEntityManager();
+$consulta = $em->createQuery('SELECT o FROM BackendBundle:articulo o');
+return $consulta;
+}
+
+public function findTodosLosArticulos()
+{
+return $this->queryTodosLosArticulos()->getResult();
+}
 }

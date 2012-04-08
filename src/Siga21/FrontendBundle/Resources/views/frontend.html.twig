@@ -15,7 +15,8 @@
 
     <h1><a href="{{ path('portada') }}"><img src="{{ asset('bundles/frontend/images/latorta.png') }}"></a></h1>
 <center>
- {% for entity in entities %}
+
+ {% for entity in tienda %}
         <p class="cabecera">{{ entity.nombre }}</p>
         <p class="cabecera">{{ entity.direccion }}</p>
         <p class="cabecera">{{ entity.telefono }}</p>
@@ -24,14 +25,32 @@
 </center>
 {% include 'FrontendBundle::paginador.html.twig' with { 'ruta': 'portada' } %}
 </header>
-{#<center>
-{% for entity2 in entities2 %}
-        <p class="cabecera">{{ entity2.nombre }}</p>
-        <p class="cabecera">{{ entity2.precio }}</p>
-        <p class="cabecera">{{ entity2.descripcion }}</p>
-{% endfor %}
-</center>#}
+<aside>
+              <a href="{{ path('portada') }}" class="btn">Regístrate</a>
+              <p>¿Ya estás registrado? <a href="{{ path('portada') }}">Haz login</a></p>
+</aside>
 <article>
-    {% block article %}{% endblock %}
+<center>
+<div id="titulo_articulos">
+<h1>Nuestros productos</h1>
+</div>
+{% for entity2 in articulo %}
+<div id="detalle_articulo">
+
+<div id="imagen_articulo">
+<img src="{{ asset('bundles/frontend/images/' ~ entity2.imagen ~  '.jpeg' ) }}">
+</div>
+
+<div id="datos_articulo">
+        <p>{{ entity2.nombre }}</p>
+        <p>{{ entity2.precio }}</p>
+        <p>{{ entity2.descripcion }}</p>
+</div>
+</div>
+{% endfor %}
+{% include 'FrontendBundle::paginador_articulo.html.twig' with { 'ruta': 'portada' } %}
+</center>
+
+   
 </article>
 {% endblock %}

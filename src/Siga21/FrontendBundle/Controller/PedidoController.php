@@ -14,12 +14,18 @@ class PedidoController extends Controller
     {
         $em = $this->getDoctrine()->getEntityManager();
         $paginador = $this->get('ideup.simple_paginator');
-        $paginador->setItemsPerPage(1);
-        $entities = $paginador->paginate($em->getRepository('BackendBundle:tienda')->queryTodasLasTiendas())->getResult();
+        $paginador->setItemsPerPage(1, 'tienda');
+        $tienda = $paginador->paginate($em->getRepository('BackendBundle:tienda')->findTodasLasTiendas(),'tienda')->getResult();
+        
+        $em1 = $this->getDoctrine()->getEntityManager();
+        /*$paginador2 = $this->get('ideup.simple_paginator');*/
+        $paginador->setItemsPerPage(2, 'articulo');
+        $articulo = $paginador->paginate($em1->getRepository('BackendBundle:articulo')->findTodosLosArticulos(),'articulo')->getResult();
                   
         return $this->render('FrontendBundle::frontend.html.twig', array(
-        'entities' => $entities,
-        'paginador' => $paginador
+        'tienda' => $tienda,
+        'articulo' => $articulo,
+        'paginador' => $paginador,
         ));
 /*
         $em = $this->getDoctrine()->getEntityManager();
