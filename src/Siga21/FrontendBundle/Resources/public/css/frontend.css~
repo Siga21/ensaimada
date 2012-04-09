@@ -35,15 +35,14 @@ body article {
 #imagen_articulo
 {
    float: left;
-   width:20%;
-   height: 140px;
-   border-bottom: 1px solid #a9a9a9;
+   width:33%;
+   height: 150px;
 }
 #datos_articulo
 {
    float:left;
-   width:80%;
-   height: 140px;
+   width:66%;
+   height: 150px;
    border-bottom: 1px solid #a9a9a9;
    color: #AC1625;
    font-size: 19px;

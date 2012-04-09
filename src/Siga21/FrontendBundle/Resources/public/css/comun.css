@@ -67,9 +67,9 @@ p {
     margin: 0 0 1em;
 }
 
-img {
+/*img {
     outline: 3px solid #E6E2DF;
-}
+}*/
 
 span.si { color: #060; }
 span.no { color: #C00; }

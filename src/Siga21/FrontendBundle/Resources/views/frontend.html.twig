@@ -34,22 +34,22 @@
 <div id="titulo_articulos">
 <h1>Nuestros productos</h1>
 </div>
+</center>
 {% for entity2 in articulo %}
 <div id="detalle_articulo">
 
 <div id="imagen_articulo">
-<img src="{{ asset('bundles/frontend/images/' ~ entity2.imagen ~  '.jpeg' ) }}">
+<img src="{{ asset('bundles/frontend/images/' ~ entity2.imagen ~  '.jpeg' ) }}" class="borderless">
 </div>
 
 <div id="datos_articulo">
         <p>{{ entity2.nombre }}</p>
-        <p>{{ entity2.precio }}</p>
+        <p>{{ entity2.precio }} €</p>
         <p>{{ entity2.descripcion }}</p>
 </div>
 </div>
 {% endfor %}
 {% include 'FrontendBundle::paginador_articulo.html.twig' with { 'ruta': 'portada' } %}
-</center>
 
    
 </article>
