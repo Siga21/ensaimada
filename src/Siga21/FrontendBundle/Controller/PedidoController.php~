@@ -19,7 +19,7 @@ class PedidoController extends Controller
         
         $em1 = $this->getDoctrine()->getEntityManager();
         /*$paginador2 = $this->get('ideup.simple_paginator');*/
-        $paginador->setItemsPerPage(4, 'articulo');
+        $paginador->setItemsPerPage(3, 'articulo');
         $articulo = $paginador->paginate($em1->getRepository('BackendBundle:articulo')->findTodosLosArticulos(),'articulo')->getResult();
                   
         return $this->render('FrontendBundle::frontend.html.twig', array(

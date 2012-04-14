@@ -35,19 +35,34 @@ body article {
 #imagen_articulo
 {
    float: left;
-   width:33%;
-   height: 150px;
+   width:20%;
+   height: 140px;
+   border-bottom: 1px solid #a9a9a9;
 }
 #datos_articulo
 {
    float:left;
-   width:66%;
-   height: 150px;
+   width:80%;
+   height: 140px;
    border-bottom: 1px solid #a9a9a9;
    color: #AC1625;
    font-size: 19px;
 }
-
+.nombre_torta{
+   font-family: Helvetica;
+   font-size: 24px;
+   margin-bottom: 0px;
+}
+.precio{
+   font-family: Helvetica;
+   font-size: 32px;
+   font-weight: bold;
+}
+.notas{
+   font-family: Helvetica;
+   font-size: 16px;
+   color: #a9a9a9;
+}
 
 
 /* =============================================================================

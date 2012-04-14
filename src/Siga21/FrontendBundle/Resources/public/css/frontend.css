@@ -48,7 +48,22 @@ body article {
    color: #AC1625;
    font-size: 19px;
 }
-
+.nombre_torta{
+   font-family: Helvetica;
+   font-size: 24px;
+   margin-bottom: 0px;
+   color: #000;
+}
+.precio{
+   font-family: Helvetica;
+   font-size: 32px;
+   font-weight: bold;
+}
+.notas{
+   font-family: Helvetica;
+   font-size: 16px;
+   color: #a9a9a9;
+}
 
 
 /* =============================================================================
