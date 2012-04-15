@@ -4,6 +4,7 @@
 header {
     background: #AC1625;
     height: 175px; 
+    font-size: 14px;
 }
 
 body aside
@@ -23,7 +24,7 @@ body article {
 
 #titulo_articulos
 {
-   widht:100%;
+   width:100%;
    height: 30px;
    color: #000;
    background-color: #a9a9a9;
@@ -52,9 +53,11 @@ body article {
    font-family: Helvetica;
    font-size: 24px;
    margin-bottom: 0px;
+   font-weight: bold;
 }
 .precio{
    font-family: Helvetica;
+   text-shadow: 5px 5px 7px #959595;
    font-size: 32px;
    font-weight: bold;
 }
@@ -217,6 +220,7 @@ form > div + p {
 
 /* boton */
 a.btn, input[type="submit"] {
+  width: 100px;
   background-image: -webkit-gradient(
     linear,
     left top,
