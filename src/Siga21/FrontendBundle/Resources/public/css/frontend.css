@@ -219,7 +219,7 @@ form > div + p {
 
 /* boton */
 a.btn, input[type="submit"] {
-  width: 100px;
+  width: 80px;
   background-image: -webkit-gradient(
     linear,
     left top,

@@ -26,8 +26,9 @@
 {% include 'FrontendBundle::paginador.html.twig' with { 'ruta': 'portada' } %}
 </header>
 <aside>
-              <a href="{{ path('portada') }}" class="btn">Regístrate</a>
-              <p>¿Ya estás registrado? <a href="{{ path('portada') }}">Haz login</a></p>
+          {#    <a href="{{ path('portada') }}" class="btn">Regístrate</a> #}
+          {#    <p>¿Ya estás registrado? <a href="{{ path('portada') }}">Haz login</a></p> #}
+          {% include 'FrontendBundle::caja_login.html.twig' with { 'ruta': 'portada' } %}
 </aside>
 <article>
 <center>
