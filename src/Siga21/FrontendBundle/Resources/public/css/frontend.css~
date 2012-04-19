@@ -2,9 +2,9 @@
    Estructura
    ========================================================================== */
 header {
-    background: #AC1625;
+    background: #fff; /*#AC1625;*/
     height: 175px; 
-    font-size: 14px;
+    color: #AC1625;
 }
 
 body aside
@@ -27,7 +27,6 @@ body article {
    width:100%;
    height: 30px;
    color: #000;
-   background-color: #a9a9a9;
 }
 #detalle_articulo
 {
@@ -54,17 +53,17 @@ body article {
    font-size: 24px;
    margin-bottom: 0px;
    font-weight: bold;
+   text-shadow: 5px 5px 7px #959595;
 }
 .precio{
    font-family: Helvetica;
-   text-shadow: 5px 5px 7px #959595;
-   font-size: 32px;
+   font-size: 16px;
    font-weight: bold;
 }
 .notas{
    font-family: Helvetica;
-   font-size: 16px;
-   color: #a9a9a9;
+   font-size: 20px;
+   color: #595959;
 }
 
 
@@ -220,7 +219,7 @@ form > div + p {
 
 /* boton */
 a.btn, input[type="submit"] {
-  width: 100px;
+  width: 80px;
   background-image: -webkit-gradient(
     linear,
     left top,
