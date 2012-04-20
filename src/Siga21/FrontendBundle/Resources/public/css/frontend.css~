@@ -63,7 +63,7 @@ body article {
 .notas{
    font-family: Helvetica;
    font-size: 20px;
-   color: #595959;
+   color: #797979;
 }
 
 
