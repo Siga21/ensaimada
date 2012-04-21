@@ -1,11 +1,10 @@
+<div id="paginador_izda">
 {% if paginador.currentPage('tienda') > 1 %}
-   <a href="{{ path(ruta, {'page': paginador.previousPage('tienda'), 'paginatorId': 'tienda'}) }}"><img src="{{ asset('bundles/frontend/images/left.png') }}" class="flechas"></a>
-{% else %}
-   {#<img src="{{ asset('bundles/frontend/images/left.png') }}" class="flechas">#}
+   <a href="{{ path(ruta, {'page': paginador.previousPage('tienda'), 'paginatorId': 'tienda'}) }}"><img src="{{ asset('bundles/frontend/images/left.png') }}" ></a>
 {% endif %}
+</div>
+<div id="paginador_dcha">
 {% if paginador.currentPage('tienda') < paginador.lastPage('tienda') %}
-   <a href="{{ path(ruta, {'page': paginador.nextPage('tienda'), 'paginatorId': 'tienda'}) }}"><img src="{{ asset('bundles/frontend/images/right.png') }}" class="flechas"></a>
-{% else %}
-    {#<img src="{{ asset('bundles/frontend/images/right.png') }}" class="flechas">#}
+   <a href="{{ path(ruta, {'page': paginador.nextPage('tienda'), 'paginatorId': 'tienda'}) }}"><img src="{{ asset('bundles/frontend/images/right.png') }}"></a>
 {% endif %}
-
+</div>
