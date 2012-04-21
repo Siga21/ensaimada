@@ -12,45 +12,6 @@
 
 {% block body %}
 <header>
-  <h1><a href="{{ path('portada') }}"><img src="{{ asset('bundles/frontend/images/latorta.png') }}"></a></h1>
-<center>
-
-{% for entity in tienda %}
-        <p class="cabecera">{{ entity.nombre }}</p>
-        <p class="cabecera">{{ entity.direccion }}</p>
-        <p class="cabecera">{{ entity.telefono }}</p>
-        <p class="cabecera">{{ entity.email }}</p>
-{% endfor %}
-</center>
-{% include 'FrontendBundle::paginador.html.twig' with { 'ruta': 'portada' } %}
 </header>
-<aside>
-          {#    <a href="{{ path('portada') }}" class="btn">Regístrate</a> #}
-          {#    <p>¿Ya estás registrado? <a href="{{ path('portada') }}">Haz login</a></p> #}
-          {% include 'FrontendBundle::caja_login.html.twig' with { 'ruta': 'portada' } %}
-</aside>
-<article>
-<center>
-<div id="titulo_articulos">
-{#<h1>Nuestros productos</h1>#}
-</div>
-</center>
-{% for entity2 in articulo %}
-<div id="detalle_articulo">
 
-<div id="imagen_articulo">
-<img src="{{ asset('bundles/frontend/images/' ~ entity2.imagen ~  '.jpeg' ) }}" class="borderless">
-</div>
-
-<div id="datos_articulo">
-        <p class="nombre_torta">{{ entity2.nombre }}</p>
-        <p class="notas">{{ entity2.descripcion }}</p> 
-        <p class="precio">{{ entity2.precio }} €</p>
-</div>
-</div>
-{% endfor %}
-{% include 'FrontendBundle::paginador_articulo.html.twig' with { 'ruta': 'portada' } %}
-
-   
-</article>
 {% endblock %}
