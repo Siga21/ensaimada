@@ -22,22 +22,14 @@ class PedidoController extends Controller
         $paginador->setItemsPerPage(4, 'articulo');
         $articulo = $paginador->paginate($em1->getRepository('BackendBundle:articulo')->findTodosLosArticulos(),'articulo')->getResult();
                   
-        return $this->render('FrontendBundle::frontend.html.twig', array(
+        return $this->render('FrontendBundle::portada.html.twig', array(
         'tienda' => $tienda,
         'articulo' => $articulo,
         'paginador' => $paginador,
         ));
-/*
-        $em = $this->getDoctrine()->getEntityManager();
-        $entities = $em->getRepository('BackendBundle:tienda')->findById('4');
-
-        $em1 = $this->getDoctrine()->getEntityManager();
-        $entities2 = $em1->getRepository('BackendBundle:articulo')->findById('3');
-
-        return $this->render('FrontendBundle::frontend.html.twig', array(
-            'entities' => $entities, 'entities2' => $entities2
-        ));
-*/
-
+    }
+    public function registroaAction()
+    {
+       return $this->render('FrontendBundle::registro.html.twig');
     }
 }

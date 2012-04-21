@@ -1,0 +1,35 @@
+{% extends 'FrontendBundle::frontend.html.twig' %}
+{% block stylesheets %}
+{% stylesheets '@FrontendBundle/Resources/public/css/normalizar.css'
+               '@FrontendBundle/Resources/public/css/comun.css'
+               '@FrontendBundle/Resources/public/css/frontend.css'
+               filter='yui_css'
+               output='css/frontend.css' %}
+<link href="{{ asset_url }}" rel="stylesheet" type="text/css" />
+{% endstylesheets %}
+{% endblock %}
+
+{% block body %}
+<header>
+  <h1><a href="{{ path('portada') }}"><img src="{{ asset('bundles/frontend/images/latorta.png') }}"></a></h1>
+<center>
+</header>
+
+{# aqui queda la ostia de css que cortar #}
+<center>
+<h2>Registrate como nuevo cliente</h2>
+<form action="{{ path('portada') }}" method="post">
+    <label for="nombre">{{ "Nombre" }}</label>
+    <input id="nombre" type="text" name="nombre" />
+    <br />
+    <label for="telefono">{{ "Telefono" }}</label>
+    <input id="telefono" type="text" name="telefono" size="10"/>
+
+    <input type="submit" value="{{ "Registrar" }}" />
+    <hr width="40%" />
+</form>
+<p> aqui queda tela que cortar pa tomar por saco</p>
+</center>
+
+{# hasta aqui #}
+{% endblock %}

@@ -7,6 +7,9 @@ header {
     color: #AC1625;
     margin-top: 15px;
 }
+#contenedor {
+    background: #fff;
+}
 
 /* =============================================================================
    Cabecera y menú de navegación

@@ -4,4 +4,4 @@ portada:
 
 registro:
     pattern:  /registro
-    defaults: { _controller: FrontendBundle:Cliente:registro }
+    defaults: { _controller: FrontendBundle:Pedido:registro }

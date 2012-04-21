@@ -1,4 +1,4 @@
-<a class="btn" href="{{ path('registro') }}">{{ "Regístrate" }}</a>
+<a class="btn" href="{{ path('portada') }}">{{ "Regístrate" }}</a>
 <form action="{{ path('portada') }}" method="post">
     <label for="login_user">{{ "Email" }}</label>
     <input id="login_user" type="text" name="_username" value="{{ last_username | default('') }}" />
