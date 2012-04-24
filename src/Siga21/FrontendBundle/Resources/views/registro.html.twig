@@ -12,18 +12,32 @@
 {% block body %}
 <header>
   <h1><a href="{{ path('portada') }}"><img src="{{ asset('bundles/frontend/images/latorta.png') }}"></a></h1>
+  <img src="{{ asset('bundles/frontend/images/foto2.jpg') }}" class="relleno">
 <center>
 </header>
 
 {# aqui queda la ostia de css que cortar #}
 <center>
 <h2>Registrate como nuevo cliente</h2>
+<hr width="50%" />
 <form action="{{ path('portada') }}" method="post">
     <label for="nombre">{{ "Nombre" }}</label>
     <input id="nombre" type="text" name="nombre" />
     <br />
+    <label for="password">{{ "Contraseña" }}</label>
+    <input id="password" type="password" name="_password"/>
+    <br />
+    <label for="direccion">{{ "Direccion" }}</label>
+    <input id="direccion" type="text" name="direccion"/>
+    <br />
     <label for="telefono">{{ "Telefono" }}</label>
-    <input id="telefono" type="text" name="telefono" size="10"/>
+    <input id="telefono" type="text" name="telefono"/>
+    <br />
+    <label for="telefono2">{{ "Telefono 2" }}</label>
+    <input id="telefono2" type="text" name="telefono2"/>
+    <br />
+    <label for="correo">{{ "Correo electronico" }}</label>
+    <input id="correo" type="text" name="correo"/>
 
     <input type="submit" value="{{ "Registrar" }}" />
     <hr width="40%" />
